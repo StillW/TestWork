@@ -26,9 +26,11 @@ public class Test {
         list.add(new FixedMonthlyCostPaidService("service7","Google Building Maker", 5347));
         list.add(new FixedMonthlyCostPaidService("service6","LinkedIn",6863));
 
+
         for (PaidService i: list)
 
-            System.out.println(i.toString());
+            //System.out.println(i.toString());
+            System.out.println(i.getId());
     }
 
 }
