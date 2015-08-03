@@ -30,7 +30,7 @@ public class Test {
 
         for (PaidService i: list)
 
-            System.out.println(i.getId()+"/"+i.getName()+"/"+ i.getCosts());
+            System.out.println(i.getId()+"/"+i.getName()+"/"+ i.calculateAvarageMonthlyCosts());
             //System.out.println(i.getId());
     }
 

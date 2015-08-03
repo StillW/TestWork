@@ -41,5 +41,5 @@ public abstract class PaidService {
         this.costs = costs;
     }
 
-    abstract double calculateAvarageMonthlyCosts();
+    abstract public double calculateAvarageMonthlyCosts();
 }

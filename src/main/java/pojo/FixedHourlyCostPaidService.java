@@ -15,12 +15,4 @@ public class FixedHourlyCostPaidService extends PaidService {
 
         return 30*24*getCosts();
     }
-
-    @Override
-    public String toString() {
-        return
-                " " + this.getId() + "/" +
-                        " " + this.getName() + "/" +
-                        " " + this.getCosts();
-    }
 }
