@@ -5,9 +5,9 @@ package pojo;
  */
 public class FixedMonthlyCostPaidService extends PaidService {
 
-    public FixedMonthlyCostPaidService(String id, String name, double costs){
+    public FixedMonthlyCostPaidService(String id, String name, double costs) {
 
-        super(id,name,costs);
+        super(id, name, costs);
     }
 
     @Override

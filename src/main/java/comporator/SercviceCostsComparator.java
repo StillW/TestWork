@@ -1,7 +1,8 @@
 package comporator;
 
-import pojo.*;
+import pojo.PaidService;
 
+import java.text.Collator;
 import java.util.Comparator;
 
 /**
@@ -9,8 +10,18 @@ import java.util.Comparator;
  */
 public class SercviceCostsComparator implements Comparator<PaidService> {
 
+    private final Collator collator = Collator.getInstance();
+
     @Override
     public int compare(PaidService o1, PaidService o2) {
-        return (int) (o2.getCosts() - o1.getCosts());
+
+        if (o2.calculateAvarageMonthlyCosts() == o1.calculateAvarageMonthlyCosts()) {
+            return collator.compare(o1.getName(), o2.getName());
+        }
+
+        return (int) (o2.calculateAvarageMonthlyCosts() - o1.calculateAvarageMonthlyCosts());
     }
 }
+
+
+

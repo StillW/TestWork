@@ -5,7 +5,7 @@ package pojo;
  */
 public class FixedHourlyCostPaidService extends PaidService {
 
-    public FixedHourlyCostPaidService(String id, String name, double costs){
+    public FixedHourlyCostPaidService(String id, String name, double costs) {
 
         super(id, name, costs);
     }
@@ -13,6 +13,6 @@ public class FixedHourlyCostPaidService extends PaidService {
     @Override
     public double calculateAvarageMonthlyCosts() {
 
-        return 30*24*getCosts();
+        return 30 * 24 * getCosts();
     }
 }

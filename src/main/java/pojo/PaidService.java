@@ -16,7 +16,6 @@ public abstract class PaidService {
     }
 
 
-
     public String getId() {
         return id;
     }

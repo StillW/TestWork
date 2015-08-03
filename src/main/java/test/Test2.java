@@ -12,7 +12,7 @@ import java.util.Collections;
 /**
  * Created by Still on 02.08.2015.
  */
-public class Test {
+public class Test2 {
 
     public static void main(String[] args) {
 
@@ -28,10 +28,12 @@ public class Test {
 
         Collections.sort(list, new SercviceCostsComparator());
 
-        for (PaidService i : list) {
+        int i = 0;
 
-            System.out.println(i.getId() + "/" + i.getName() + "/" + i.calculateAvarageMonthlyCosts());
+        while (i < 5) {
+            PaidService value = list.get(i);
+            System.out.println(value.getName());
+            i++;
         }
     }
 }
-
