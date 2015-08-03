@@ -5,8 +5,8 @@ import pojo.FixedHourlyCostPaidService;
 import pojo.FixedMonthlyCostPaidService;
 import pojo.PaidService;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.Collections;
 
 
 /**
@@ -16,7 +16,7 @@ public class Test {
 
     public static void main(String[] args){
 
-        Set<PaidService> list = new TreeSet<>(new SercviceCostsComparator());
+        ArrayList<PaidService> list = new ArrayList<PaidService>();
 
         list.add(new FixedHourlyCostPaidService("service1","Google Orkut", 11));
         list.add(new FixedHourlyCostPaidService("service2","Google voice", 9.4));
@@ -26,11 +26,12 @@ public class Test {
         list.add(new FixedMonthlyCostPaidService("service7","Google Building Maker", 5347));
         list.add(new FixedMonthlyCostPaidService("service6","LinkedIn",6863));
 
+        Collections.sort(list, new SercviceCostsComparator());
 
         for (PaidService i: list)
 
-            //System.out.println(i.toString());
-            System.out.println(i.getId());
+            System.out.println(i.getId()+"/"+i.getName()+"/"+ i.getCosts());
+            //System.out.println(i.getId());
     }
 
 }

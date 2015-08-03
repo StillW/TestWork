@@ -5,54 +5,22 @@ package pojo;
  */
 public class FixedHourlyCostPaidService extends PaidService {
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getCosts() {
-        return (int) costs;
-    }
-
-    public void setCosts(double costs) {
-        this.costs = costs;
-    }
-
-    String id;
-    String name;
-    double costs;
-
     public FixedHourlyCostPaidService(String id, String name, double costs){
 
-        this.id = id;
-        this.name = name;
-        this.costs = calculateAvarageMonthlyCosts(costs);
-
+        super(id, name, costs);
     }
 
     @Override
-    public double calculateAvarageMonthlyCosts(double value) {
+    public double calculateAvarageMonthlyCosts() {
 
-        double ame = 30*24*value;
-        return (int) ame;
+        return 30*24*getCosts();
     }
 
     @Override
     public String toString() {
         return
-                " " + this.id + "/" +
-                " " + this.name + "/" +
-                " " + (int)this.costs;
+                " " + this.getId() + "/" +
+                        " " + this.getName() + "/" +
+                        " " + this.getCosts();
     }
 }

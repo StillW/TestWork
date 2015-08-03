@@ -5,6 +5,18 @@ package pojo;
  */
 public abstract class PaidService {
 
+    private String id;
+    private String name;
+    private double costs;
+
+    PaidService(String id, String name, double costs) {
+        this.name = name;
+        this.id = id;
+        this.costs = costs;
+    }
+
+
+
     public String getId() {
         return id;
     }
@@ -21,17 +33,13 @@ public abstract class PaidService {
         this.name = name;
     }
 
-    public int getCosts() {
-        return (int) costs;
+    public double getCosts() {
+        return costs;
     }
 
     public void setCosts(int costs) {
         this.costs = costs;
     }
 
-    String id;
-    String name;
-    double costs;
-
-    abstract double calculateAvarageMonthlyCosts(double costs);
+    abstract double calculateAvarageMonthlyCosts();
 }

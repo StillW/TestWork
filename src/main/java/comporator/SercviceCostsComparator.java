@@ -11,6 +11,6 @@ public class SercviceCostsComparator implements Comparator<PaidService> {
 
     @Override
     public int compare(PaidService o1, PaidService o2) {
-        return o2.getCosts() - o1.getCosts();
+        return (int) (o2.getCosts() - o1.getCosts());
     }
 }
